@@ -18,8 +18,21 @@ ol {
   justify-content: space-evenly;
   align-items: center;
 }
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+.txt {
+  font-size: 24px;
+}
 .heading {
+  color: crimson;
+  width: 200px;
   text-align: center;
-  width: 300px;
   font-size: 56px;
 }

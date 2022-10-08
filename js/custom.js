@@ -14,5 +14,5 @@ myArr.map((item) => {
 
   let stop = setInterval(() => {
     countUp();
-  }, 1000 / item.dataset.number);
+  }, 1500 / item.dataset.number);
 });
