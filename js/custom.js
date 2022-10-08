@@ -1,21 +1,18 @@
-let date = document.querySelector(".date");
-let start = 0;
+let count = document.querySelectorAll(".heading");
+let myArr = Array.from(count);
 
-let countUp = () => {
-  start++;
-  date.innerHTML = start;
-  if (start == date.dataset.date) {
-    clearInterval(stop);
+myArr.map((item) => {
+  let start = 0;
+
+  function countUp() {
+    start++;
+    item.innerHTML = start;
+    if (start == item.dataset.number) {
+      clearInterval(stop);
+    }
   }
-};
 
-let stop = setInterval(() => {
-  // countUp();
-}, 700);
-
-countUp();
-console.log("value is: " + start);
-countUp();
-console.log("value is: " + start);
-countUp();
-console.log("value is: " + start);
+  let stop = setInterval(() => {
+    countUp();
+  }, 1000 / item.dataset.number);
+});
